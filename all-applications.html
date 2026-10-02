@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Applications - JobTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            JobTrack
+        </div>
+
+        <nav>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="manage-users.html">
+                Manage Users
+            </a>
+
+            <a href="all-applications.html">
+                All Applications
+            </a>
+
+            <a href="index.html" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="applications-page">
+
+        <div class="applications-header">
+
+            <div>
+
+                <p class="small-title">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    All Applications
+                </h1>
+
+                <p>
+                    Monitor all job applications submitted by users.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Filters -->
+        <section class="filter-bar">
+
+            <input
+                type="text"
+                id="adminSearchApplication"
+                placeholder="Search company, role or user..."
+            >
+
+
+            <select id="adminStatusFilter">
+
+                <option value="All">
+                    All Status
+                </option>
+
+                <option value="Applied">
+                    Applied
+                </option>
+
+                <option value="Interview">
+                    Interview
+                </option>
+
+                <option value="Selected">
+                    Selected
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Applications -->
+        <section
+            id="allApplicationsContainer"
+            class="applications-container"
+        >
+
+            <!-- Applications will be displayed using JavaScript -->
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

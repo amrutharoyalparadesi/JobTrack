@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Dashboard - JobTrack</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            JobTrack
+        </a>
+
+
+        <nav>
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-application.html">
+                Add Application
+            </a>
+
+            <a href="applications.html">
+                My Applications
+            </a>
+
+            <a
+                href="#"
+                id="logoutBtn"
+            >
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main class="dashboard-page">
+
+
+        <!-- DASHBOARD HEADER -->
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <p class="small-title">
+                    USER DASHBOARD
+                </p>
+
+
+                <h1>
+                    Welcome to JobTrack
+                </h1>
+
+
+                <p>
+                    Manage your job applications and track your career progress.
+                </p>
+
+            </div>
+
+
+            <a
+                href="add-application.html"
+                class="dashboard-btn"
+            >
+                + Add Application
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- TOTAL -->
+
+            <div class="stat-card">
+
+                <p>
+                    📋
+                </p>
+
+                <p>
+                    Total Applications
+                </p>
+
+                <h2 id="totalApplications">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <!-- APPLIED -->
+
+            <div class="stat-card">
+
+                <p>
+                    📤
+                </p>
+
+                <p>
+                    Applied
+                </p>
+
+                <h2 id="appliedCount">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <!-- INTERVIEWS -->
+
+            <div class="stat-card">
+
+                <p>
+                    📅
+                </p>
+
+                <p>
+                    Interviews
+                </p>
+
+                <h2 id="interviewCount">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <!-- SELECTED -->
+
+            <div class="stat-card">
+
+                <p>
+                    🎯
+                </p>
+
+                <p>
+                    Selected
+                </p>
+
+                <h2 id="selectedCount">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DASHBOARD CONTENT
+        ========================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =========================
+                 RECENT APPLICATIONS
+            ========================== -->
+
+            <div class="dashboard-section">
+
+
+                <div
+                    style="
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    margin-bottom:18px;
+                    "
+                >
+
+                    <h2>
+                        Recent Applications
+                    </h2>
+
+
+                    <a
+                        href="applications.html"
+                        style="
+                        color:#1769d2;
+                        font-size:13px;
+                        font-weight:600;
+                        "
+                    >
+                        View All →
+                    </a>
+
+                </div>
+
+
+
+                <!-- APPLICATIONS WILL LOAD HERE -->
+
+                <div id="recentApplications">
+
+                    <div class="dashboard-empty">
+
+                        <p
+                            style="
+                            font-size:28px;
+                            margin-bottom:10px;
+                            "
+                        >
+                            📂
+                        </p>
+
+
+                        <h3
+                            style="
+                            margin-bottom:8px;
+                            "
+                        >
+                            No applications yet
+                        </h3>
+
+
+                        <p
+                            style="
+                            margin-bottom:18px;
+                            "
+                        >
+                            Start tracking your job applications by
+                            adding your first application.
+                        </p>
+
+
+                        <a
+                            href="add-application.html"
+                            class="dashboard-btn"
+                        >
+                            Add Application
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 QUICK ACTIONS
+            ========================== -->
+
+            <div class="dashboard-section">
+
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+
+                <div class="quick-actions">
+
+
+                    <!-- ADD APPLICATION -->
+
+                    <a
+                        href="add-application.html"
+                        class="quick-action"
+                    >
+
+                        <h3>
+                            ➕ Add Application
+                        </h3>
+
+                        <p>
+                            Track a new job application
+                        </p>
+
+                    </a>
+
+
+
+                    <!-- MY APPLICATIONS -->
+
+                    <a
+                        href="applications.html"
+                        class="quick-action"
+                    >
+
+                        <h3>
+                            📋 My Applications
+                        </h3>
+
+                        <p>
+                            View and manage your applications
+                        </p>
+
+                    </a>
+
+
+
+                    <!-- TRACK PROGRESS -->
+
+                    <a
+                        href="applications.html"
+                        class="quick-action"
+                    >
+
+                        <h3>
+                            📊 Track Progress
+                        </h3>
+
+                        <p>
+                            Check your application status
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

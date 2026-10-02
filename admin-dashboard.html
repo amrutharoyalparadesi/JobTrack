@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - JobTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            JobTrack
+        </div>
+
+        <nav>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="manage-users.html">
+                Manage Users
+            </a>
+
+            <a href="all-applications.html">
+                All Applications
+            </a>
+
+            <a href="index.html" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Admin Dashboard -->
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <p class="small-title">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Manage users and monitor job applications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <p>
+                        Total Users
+                    </p>
+
+                    <h2 id="adminTotalUsers">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <p>
+                        Applications
+                    </p>
+
+                    <h2 id="adminTotalApplications">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <p>
+                        Interviews
+                    </p>
+
+                    <h2 id="adminInterviews">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🎯
+                </div>
+
+                <div>
+
+                    <p>
+                        Selected
+                    </p>
+
+                    <h2 id="adminSelected">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Admin Actions -->
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <h2>
+                    User Management
+                </h2>
+
+                <p class="admin-card-text">
+                    View and manage all registered users.
+                </p>
+
+                <a
+                    href="manage-users.html"
+                    class="btn get-started"
+                >
+                    Manage Users
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>
+                    Application Management
+                </h2>
+
+                <p class="admin-card-text">
+                    View all job applications submitted
+                    by users.
+                </p>
+
+            <a
+            href="all-applications.html"
+            class="btn get-started"
+            >
+               View Applications
+            </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

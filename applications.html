@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications - JobTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            JobTrack
+        </a>
+
+        <nav>
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-application.html">
+                Add Application
+            </a>
+
+            <a href="applications.html">
+                My Applications
+            </a>
+
+            <a href="index.html" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="applications-page">
+
+        <!-- Page Header -->
+
+        <div class="applications-header">
+
+            <div>
+
+                <p class="small-title">
+                    APPLICATION TRACKER
+                </p>
+
+                <h1>
+                    My Applications
+                </h1>
+
+                <p>
+                    View and manage all your job applications.
+                </p>
+
+            </div>
+
+
+            <a
+                href="add-application.html"
+                class="btn get-started"
+            >
+                + Add Application
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             SEARCH & FILTER
+        ========================== -->
+
+        <section class="filter-bar">
+
+            <input
+                type="text"
+                id="searchApplication"
+                placeholder="Search company or job role..."
+            >
+
+
+            <select id="statusFilter">
+
+                <option value="All">
+                    All Status
+                </option>
+
+                <option value="Applied">
+                    Applied
+                </option>
+
+                <option value="Interview">
+                    Interview
+                </option>
+
+                <option value="Selected">
+                    Selected
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- =========================
+             APPLICATIONS
+        ========================== -->
+
+        <section
+            id="applicationsContainer"
+            class="applications-container"
+        >
+
+            <!-- JavaScript displays applications here -->
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         EDIT APPLICATION MODAL
+    ========================== -->
+
+    <div
+        id="editModal"
+        class="edit-modal"
+        style="display:none;"
+    >
+
+        <div class="edit-modal-content">
+
+            <div class="edit-modal-header">
+
+                <h2>
+                    Edit Application
+                </h2>
+
+                <button
+                    type="button"
+                    class="close-modal"
+                    onclick="closeEditModal()"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="editApplicationForm">
+
+                <!-- Hidden Application ID -->
+
+                <input
+                    type="hidden"
+                    id="editApplicationId"
+                >
+
+
+                <!-- Company -->
+
+                <div class="form-group">
+
+                    <label for="editCompany">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editCompany"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Job Role -->
+
+                <div class="form-group">
+
+                    <label for="editJobRole">
+                        Job Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editJobRole"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Location -->
+
+                <div class="form-group">
+
+                    <label for="editLocation">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editLocation"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Job Type -->
+
+                <div class="form-group">
+
+                    <label for="editJobType">
+                        Job Type
+                    </label>
+
+                    <select id="editJobType">
+
+                        <option value="Full Time">
+                            Full Time
+                        </option>
+
+                        <option value="Part Time">
+                            Part Time
+                        </option>
+
+                        <option value="Internship">
+                            Internship
+                        </option>
+
+                        <option value="Contract">
+                            Contract
+                        </option>
+
+                        <option value="Remote">
+                            Remote
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Application Date -->
+
+                <div class="form-group">
+
+                    <label for="editApplicationDate">
+                        Application Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="editApplicationDate"
+                    >
+
+                </div>
+
+
+                <!-- Status -->
+
+                <div class="form-group">
+
+                    <label for="editStatus">
+                        Application Status
+                    </label>
+
+                    <select id="editStatus">
+
+                        <option value="Applied">
+                            Applied
+                        </option>
+
+                        <option value="Interview">
+                            Interview
+                        </option>
+
+                        <option value="Selected">
+                            Selected
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Interview Date -->
+
+                <div class="form-group">
+
+                    <label for="editInterviewDate">
+                        Interview Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="editInterviewDate"
+                    >
+
+                </div>
+
+
+                <!-- Notes -->
+
+                <div class="form-group">
+
+                    <label for="editNotes">
+                        Notes
+                    </label>
+
+                    <textarea
+                        id="editNotes"
+                        rows="4"
+                        placeholder="Add notes about this application..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="edit-modal-buttons">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        onclick="closeEditModal()"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                    >
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

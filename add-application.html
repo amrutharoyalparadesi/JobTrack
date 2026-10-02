@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Application - JobTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            JobTrack
+        </div>
+
+        <nav>
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="add-application.html">
+                Add Application
+            </a>
+
+            <a href="applications.html">
+                My Applications
+            </a>
+
+            <a href="index.html" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="form-page">
+
+        <div class="page-heading">
+
+            <p class="small-title">
+                JOB APPLICATION
+            </p>
+
+            <h1>
+                Add New Application
+            </h1>
+
+            <p>
+                Enter the details of the job you applied for.
+            </p>
+
+        </div>
+
+
+        <!-- Application Form -->
+        <div class="application-form-card">
+
+            <form id="applicationForm">
+
+
+                <!-- Company -->
+                <div class="form-group">
+
+                    <label for="company">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="e.g. Google"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Job Role -->
+                <div class="form-group">
+
+                    <label for="jobRole">
+                        Job Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="jobRole"
+                        placeholder="e.g. Software Engineer"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Location -->
+                <div class="form-group">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. Hyderabad / Remote"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Job Type -->
+                <div class="form-group">
+
+                    <label for="jobType">
+                        Job Type
+                    </label>
+
+                    <select id="jobType" required>
+
+                        <option value="">
+                            Select Job Type
+                        </option>
+
+                        <option value="Full Time">
+                            Full Time
+                        </option>
+
+                        <option value="Part Time">
+                            Part Time
+                        </option>
+
+                        <option value="Internship">
+                            Internship
+                        </option>
+
+                        <option value="Contract">
+                            Contract
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Application Date -->
+                <div class="form-group">
+
+                    <label for="applicationDate">
+                        Application Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="applicationDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Status -->
+                <div class="form-group">
+
+                    <label for="status">
+                        Application Status
+                    </label>
+
+                    <select id="status" required>
+
+                        <option value="">
+                            Select Status
+                        </option>
+
+                        <option value="Applied">
+                            Applied
+                        </option>
+
+                        <option value="Interview">
+                            Interview
+                        </option>
+
+                        <option value="Selected">
+                            Selected
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Interview Date -->
+                <div class="form-group">
+
+                    <label for="interviewDate">
+                        Interview Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="interviewDate"
+                    >
+
+                </div>
+
+
+                <!-- Notes -->
+                <div class="form-group">
+
+                    <label for="notes">
+                        Notes
+                    </label>
+
+                    <textarea
+                        id="notes"
+                        rows="4"
+                        placeholder="Add any notes about this application..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Message -->
+                <p
+                    id="applicationMessage"
+                    class="form-message"
+                ></p>
+
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <a
+                        href="user-dashboard.html"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn save-btn"
+                    >
+                        Save Application
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
